@@ -23,7 +23,7 @@ if not OPENAI_API_KEY:
     sys.exit(1)
 
 print(f"Connecting to OpenAI-compatible API at {OPENAI_API_BASE}")
-print("Using model: claude-sonnet-4")
+print("Using model: qwen3-30b-a3b")
 
 # ✅ OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_API_BASE)
@@ -37,7 +37,7 @@ if not user_prompt:
 # 🧠 Ask LLM
 print("\n💬 Prompting LLM to generate Cypher...")
 response = client.chat.completions.create(
-    model="claude-sonnet-4",
+    model="qwen3-30b-a3b",
     messages=[
         {
             "role": "system",
